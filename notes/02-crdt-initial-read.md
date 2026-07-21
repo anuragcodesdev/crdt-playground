@@ -23,8 +23,8 @@ A JSON document is a **tree** with two types of branch nodes:
   - Elements can be inserted or deleted.
 
 Nodes can contain:
-- **Branch nodes** → another map or list.
-- **Leaf nodes** → primitive values (`string`, `number`, `boolean`, `null`).
+- **Branch nodes** -> another map or list.
+- **Leaf nodes** -> primitive values (`string`, `number`, `boolean`, `null`).
 
 Primitive values are immutable but can be replaced with a new value.
 
