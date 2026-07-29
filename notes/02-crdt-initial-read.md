@@ -45,5 +45,10 @@ The JSON model can represent different applications. For example, a text documen
 - Does not require a central server to merge or transform updates.
 - Supports peer-to-peer and encrypted messaging due to server-independence.
 
+### CRDTs
+CRDTs are well established data structures supporting concurrent modification and guarantee convergence of concurrent updates. The key behind this is to attrach additional metadata to and making operation level modification operations being commutative by construction.
+
+The well defined use cases for CRDTs span across registers, counters, maps and sets. However, in almost all of these cases we "assume that each element in the CRDT is a primitive value, and not another CRDT" - simply put it's a nested json.
+
 ## Questions
 How does this data structure not depend on the network? How can two different devices merge their versions and get the correct version out without sharing orders through the network?
