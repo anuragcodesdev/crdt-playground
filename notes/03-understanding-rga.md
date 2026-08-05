@@ -1,4 +1,4 @@
-# Understanding RGA
+# Understanding RGA (Replicated Growable Array)
 
 ## Objective
 The goal here is to understand the RGA data structure, starting from a single node and building out an implementation in Python. This implementation will act as a foundation for implementing the main CRDT in TypeScript later in the project.
@@ -19,7 +19,16 @@ A simple data structure representing a node. Each node needs to contain the foll
 The general operations needed for the CRDT to function at a basic level are:
 
 - Insert
+    - Create a new node
+    - Assign a unique ID
+    - Store the parent relationship (HEAD if inserted at the beginning)
+    - Resolve concurrent inserts using deterministic ordering
+
+
 - Delete
+    - Mark the node as deleted (tombstone)
+    - Preserve the node so future operations can still reference it
+
 - Render
 - Merge
 
